@@ -22,15 +22,23 @@ class App extends React.Component {
   // === GET CAST MEMBERS BASED ON MOVIE ID === //
 
   getCast(movieId) {
-    fetch(`/actors?movieId=${movieId}`)
+    fetch(`http://localhost:2002/actors?movieId=${movieId}`, {
+      method: "GET",
+      mode: "no-cors",
+      headers: {
+        "Content-Type":"application/json"
+      }
+    })
       .then(res => res.json())
-      .then(castInfo =>
+      .then(castInfo => {
+        console.log('cast info: ', castInfo);
         this.setState({
           cast: castInfo
         })
+      }
       )
-      .catch(err=> {
-        console.log(`getCast error=${err}`);
+      .catch(err => {
+        console.log(`getCast error: `, err);
       });
   }
 
