@@ -21,7 +21,7 @@ class App extends React.Component {
 
   // === GET CAST MEMBERS BASED ON MOVIE ID === //
 
-  getCast(movieId) {
+  getCast() {
     let urlID = window.location.pathname
     .split('')
     .filter((char) => {
@@ -52,7 +52,7 @@ class App extends React.Component {
   // === GET CAST MEMBERS BASED ON COMPONENT MOUNT === //
 
   componentDidMount() {
-    this.getCast(this.state.movieId);
+    this.getCast();
   }
 
   // === RENDER LIST OF CAST MEMBERS (for testing purposes) === //
