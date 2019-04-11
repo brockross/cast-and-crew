@@ -22,7 +22,14 @@ class App extends React.Component {
   // === GET CAST MEMBERS BASED ON MOVIE ID === //
 
   getCast(movieId) {
-    fetch(`http://localhost:2002/actors?movieId=${movieId}`/*, {
+    let urlID = window.location.pathname
+    .split('')
+    .filter((char) => {
+      return !isNaN(char);
+    })
+    .join('');
+
+    fetch(`http://localhost:2002/actors?movieId=${urlID}`/*, {
       method: "GET",
       mode: "no-cors",
       headers: {
