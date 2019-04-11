@@ -1,10 +1,10 @@
 import React from 'react';
-import styled from 'styled-components';
+// import styled from 'styled-components';
 import Carousel from './carousel.jsx';
 
 // === STYLES === //
 
-const Wrapper = styled.section`
+const Wrapper = window.styled.section`
   background: #eaeaea;
 `;
 
@@ -22,13 +22,13 @@ class App extends React.Component {
   // === GET CAST MEMBERS BASED ON MOVIE ID === //
 
   getCast(movieId) {
-    fetch(`http://localhost:2002/actors?movieId=${movieId}`, {
+    fetch(`http://localhost:2002/actors?movieId=${movieId}`/*, {
       method: "GET",
       mode: "no-cors",
       headers: {
         "Content-Type":"application/json"
       }
-    })
+    }*/)
       .then(res => res.json())
       .then(castInfo => {
         console.log('cast info: ', castInfo);

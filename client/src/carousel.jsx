@@ -1,10 +1,10 @@
 import React from 'react';
-import styled from 'styled-components';
+// import styled from 'styled-components';
 import CarouselItem from './carouselItem.jsx';
 
 // === STYLES === //
 
-const Wrapper = styled.div`
+const Wrapper = window.styled.div`
   overflow: hidden;
   position: relative;
   margin-right: auto;
@@ -13,14 +13,14 @@ const Wrapper = styled.div`
   padding: 40px;
 `;
 
-const CarouselWrapper = styled.div`
+const CarouselWrapper = window.styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
   height: 254px;
 `;
 
-const LeftButton = styled.button`
+const LeftButton = window.styled.button`
   border: none;
   background-color: #fff;
   position: relative;
@@ -33,7 +33,7 @@ const LeftButton = styled.button`
   }
 `;
 
-const RightButton = styled.button`
+const RightButton = window.styled.button`
   border: none;
   background-color: #fff;
   position: relative;
@@ -47,7 +47,7 @@ const RightButton = styled.button`
   }
 `;
 
-const CarouselContainer = styled.div`
+const CarouselContainer = window.styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -57,7 +57,7 @@ const CarouselContainer = styled.div`
   align-content: center;
 `;
 
-const ItemWrapper = styled.div`
+const ItemWrapper = window.styled.div`
   flex: 0 1 100%;
   flex-basis: 20%;
   margin-right: 8px;
@@ -66,7 +66,7 @@ const ItemWrapper = styled.div`
 `;
 
 
-const Title = styled.h3`
+const Title = window.styled.h3`
   display: inline-block;
   font-family: Alternate Gothic No1 D;
   font-size: 38px;
@@ -83,7 +83,7 @@ const Title = styled.h3`
 
 
 
-const FullCast = styled.a`
+const FullCast = window.styled.a`
   margin-top: 10px;
   float: right;
   font-family: 'Montserrat', sans-serif;

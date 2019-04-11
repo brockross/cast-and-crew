@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const cors = require('cors');
 const mongoose = require('mongoose');
 const dbIndex = require('../database/index.js');
 const port = 2002;
@@ -16,6 +17,7 @@ db.once('open', function() {
 app.use('/', express.static(__dirname + '/../client/dist'));
 
 app.use(express.json());
+app.use(cors());
 
 app.get('/actors', (req, res) => {
   console.log(JSON.stringify(req.query)); // = {"movieId":"1"}

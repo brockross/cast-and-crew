@@ -13,6 +13,7 @@
     "seed-db": "mongoimport --db fandangit --collection actors --drop --file database/fandangit-cast-2001.json"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.16.4",
     "mongodb": "^3.2.2",
     "mongoose": "^5.4.20",
