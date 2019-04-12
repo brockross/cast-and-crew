@@ -7,6 +7,7 @@ const port = 2002;
 
 let database = 'fandangit';
 mongoose.connect(`mongodb://localhost/${database}`, { useNewUrlParser: true });
+app.use(cors());
 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
@@ -17,7 +18,7 @@ db.once('open', function() {
 app.use('/', express.static(__dirname + '/../client/dist'));
 
 app.use(express.json());
-app.use(cors());
+
 
 app.get('/actors', (req, res) => {
   console.log(JSON.stringify(req.query)); // = {"movieId":"1"}

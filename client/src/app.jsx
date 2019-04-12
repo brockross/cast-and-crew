@@ -29,7 +29,7 @@ class App extends React.Component {
     })
     .join('');
 
-    fetch(`http://localhost:2002/actors?movieId=${urlID}`/*, {
+    fetch(`http://localhost:2002/actors?movieId=${urlID || 1}`/*, {
       method: "GET",
       mode: "no-cors",
       headers: {
