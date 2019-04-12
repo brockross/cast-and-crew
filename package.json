@@ -8,6 +8,7 @@
     "node": ">=6.13.0"
   },
   "scripts": {
+    "test": "jest --coverage",
     "react-dev": "webpack -d --watch",
     "server-dev": "nodemon server/index.js",
     "seed-db": "mongoimport --db fandangit --collection actors --drop --file database/fandangit-cast-2001.json"
@@ -19,6 +20,7 @@
     "mongoose": "^5.4.20",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "reactjs-popup": "^1.3.2",
     "styled-components": "^4.2.0"
   },
   "devDependencies": {
@@ -39,7 +41,7 @@
   },
   "jest": {
     "setupFiles": [
-      "./src/setupTests.js"
+      "./client/src/setupTests.js"
     ],
     "snapshotSerializers": [
       "enzyme-to-json/serializer"

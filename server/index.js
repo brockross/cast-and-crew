@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require ('cors');
 const app = express();
 const cors = require('cors');
 const mongoose = require('mongoose');
@@ -17,11 +18,16 @@ db.once('open', function() {
 
 app.use('/', express.static(__dirname + '/../client/dist'));
 
+// === THIS IS FOR TESTING GETTING DIFFERENT MOVIES BY NAME OR id === //
+// app.use('/*/styles.css', express.static(__dirname + '/../client'));
+// app.use('/*', express.static(__dirname + '/../client'));
+
+app.use(cors());
 app.use(express.json());
 
 
 app.get('/actors', (req, res) => {
-  console.log(JSON.stringify(req.query)); // = {"movieId":"1"}
+  // console.log(JSON.stringify(req.query)); // = {"movieId":"1"}
   let movieId = req.query;
   dbIndex.getActors(movieId, (err, results) => {
     if (err) {
