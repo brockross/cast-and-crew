@@ -1,7 +1,6 @@
 const express = require('express');
 const cors = require ('cors');
 const app = express();
-const cors = require('cors');
 const mongoose = require('mongoose');
 const dbIndex = require('../database/index.js');
 const port = 2002;
